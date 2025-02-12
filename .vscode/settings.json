@@ -13,13 +13,13 @@
             "runIn": "terminal",
         },
         {
-            "match": ".*\\-web.php$",
-            "command": "clear && php open-browser.php ${file}",
-            "runIn": "backend",
+            "match": ".*\\.web.php$",
+            "command": "php open-browser.php ${file}",
+            "runIn": "terminal",
         },
         {
             "languages": ["javascript"],
-            "command": "clear && node ${file} < input.txt > output.txt",
+            "command": "node ${file}",
             "runIn": "terminal",
         },
         {
