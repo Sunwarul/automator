@@ -1,0 +1,36 @@
+{
+    "files.autoSave": "onWindowChange",
+    "runOnSave.statusMessageTimeout": 3000,
+    "runOnSave.commands": [
+        {
+            "languages": ["php"],
+            "command": "clear && php ${file} < input.txt > output.txt",
+            "runIn": "backend",
+        },
+        {
+            "match": ".*\\.cli.php$",
+            "command": "clear && php ${file}",
+            "runIn": "terminal",
+        },
+        {
+            "match": ".*\\-web.php$",
+            "command": "clear && php open-browser.php ${file}",
+            "runIn": "backend",
+        },
+        {
+            "languages": ["javascript"],
+            "command": "clear && node ${file} < input.txt > output.txt",
+            "runIn": "terminal",
+        },
+        {
+            "match": ".*\\.cs$",
+            "command": "clear && dotnet script ${file} < input.txt > output.txt",
+            "runIn": "backend",
+        },
+        {
+            "match": ".*\\.sql$",
+            "command": "clear && mysql -u root -ppassword -t < ${file}",
+            "runIn": "terminal",
+        }
+    ]
+}
