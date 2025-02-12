@@ -1,14 +1,11 @@
-<?php
 
-echo '<h1>Hello 132</h1>' . rand(1, 1000); 
 ?>
 <script>
     function  liveReload(){
-        // console.log('Reloading...');
-        fetch('/.vscode/checker.php?file=hi.web.php')
+        console.log('Reloading...');
+        fetch('/.vscode/checker.php?file=FILENAME')
             .then(response => response.text())
             .then(data => {
-                console.log(data);
                 if (data.trim() === 'reload') {
                     location.reload();
                 }

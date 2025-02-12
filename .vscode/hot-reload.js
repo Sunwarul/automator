@@ -1,0 +1,12 @@
+function liveReload() {
+    console.log('Reloading...');
+    fetch('/__reload')
+        .then(response => response.text())
+        .then(data => {
+            if (data.trim() === 'reload') {
+                location.reload();
+            }
+        })
+        .catch(error => console.error('Live reload error:', error));
+}
+setInterval(liveReload, 2000); // Check for changes every 2 seconds
